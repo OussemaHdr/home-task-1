@@ -9,7 +9,7 @@
    ```bash
    pip install -r requirements.txt
 2. PostgreSQL Configuration:  
-[To install PostgreSQL](https://www.postgresql.org/download/).  
+[Link to install PostgreSQL](https://www.postgresql.org/download/).  
 Start the Postgres service:  
     ```bash
     sudo service postgresql start
@@ -23,6 +23,12 @@ Start the Postgres service:
 Run the ETL pipeline to read the CSV sample, transform the data, and load it into the PostgreSQL db:  
 ```bash
 python etl/etl.py data/sample.csv <database_name> <username> <password> <table_name>
+```
+## Testing the ETL Pipeline  
+Run simple unit tests to verify the functions are returning results and that the results are of the expected type:
+```bash
+python test_load.py
+python test_transform.py
 ```
 ## Running the REST API
 Run the REST API to expose an endpoint for retrieving data from the PostgreSQL db:
