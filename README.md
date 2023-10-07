@@ -9,12 +9,12 @@
    ```bash
    pip install -r requirements.txt
 2. PostgreSQL Configuration:  
-First ensure you have Postgres installed. [You can download it from the official Postgres website](https://link-url-here.org).  
+First ensure you have Postgres installed. [You can download it from the official Postgres website](https://www.postgresql.org/download/).  
 Start the Postgres service:  
     ```bash
     sudo service postgresql start
     ```
-    Run the setup bash script to create the Postgres db, user and table (all the varibales used here will be used to run the rest of the scripts): 
+    Run the setup bash script to create the Postgres db, user and table (all the variables used here will be used to run the rest of the scripts): 
     ```bash
     chmod +x postgres_setup.sh
     ./postgres_setup.sh <database_name> <username> <password> <table_name>
