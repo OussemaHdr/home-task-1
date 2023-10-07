@@ -34,7 +34,8 @@ def read_first_chunk():
                 'id': row[0],
                 'first_name': row[1],  
                 'last_name': row[2],   
-                'location': row[3]  
+                'age': row[3],
+                'location': row[4]  
             })
 
         cursor.close()

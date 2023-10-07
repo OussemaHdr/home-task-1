@@ -52,8 +52,8 @@ def load_to_db(data, db_name, user_name, user_password, table_name):
         cursor = conn.cursor()
         for record in data:
             cursor.execute(
-                f"INSERT INTO {table_name} (id, first_name, last_name, location) VALUES (%s, %s, %s, %s)",
-                (record['id'], record['first_name'], record['last_name'], record['location'])
+                f"INSERT INTO {table_name} (id, first_name, last_name, age, location) VALUES (%s, %s, %s, %s, %s)",
+                (record['id'], record['first_name'], record['last_name'], record['age'], record['location'])
             )
         conn.commit()
         logger.info("Data loaded successfully")

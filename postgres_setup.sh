@@ -24,6 +24,7 @@ CREATE TABLE $TABLE_NAME (
     id VARCHAR(36) PRIMARY KEY,
     first_name VARCHAR(50) NOT NULL,
     last_name VARCHAR(50) NOT NULL,
+    age INT NOT NULL,
     location VARCHAR(50) NOT NULL
 );
 EOF

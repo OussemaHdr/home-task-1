@@ -16,6 +16,7 @@ Start the Postgres service:
     ```
     Run the setup bash script to create the Postgres db, user and table (all the varibales used here will be used to run the rest of the scripts): 
     ```bash
+    chmod +x postgres_setup.sh
     ./postgres_setup.sh <database_name> <username> <password> <table_name>
     ```
 ## Running the ETL Pipeline  
