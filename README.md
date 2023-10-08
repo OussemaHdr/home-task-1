@@ -1,5 +1,6 @@
 # Home Task - Data Engineer - 1
 ## Setup
+***OS used: Ubuntu 20.04.6***
 1. Clone the repository:
 
    ```bash
