@@ -49,9 +49,9 @@ python api/test_api.py  <database_name> <username> <password> <table_name>
 2. **API Gateway Configuration:**
     - Set up an API in Amazon API Gateway with the route /read/first-chunk.
     - Configure the API to integrate with an AWS Lambda function.
-3. **AWS Lambda Function:**  
-    - Create an AWS Lambda function that handles the fetching of data from the PostgreSQL database.
-    - The Lambda function will be triggered when a request is received through the API Gateway.  
+3. **Lambda Function to fetch data:**  
+    - A Lambda function that handles the fetching of data from the PostgreSQL database.
+    - This function will be triggered when a request is received through the API Gateway.  
 
 Alternatively 2 and 3 this also can be achieved by using *the Serverless framework* which would be my preferred aproach.  
 
