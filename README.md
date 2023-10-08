@@ -40,7 +40,9 @@ Run the test script to send a request to the API and print the response:
 ```bash
 python api/test_api.py  <database_name> <username> <password> <table_name>
 ```
-## Deployment system diagram (AWS) and explanation  
+## Deployment system diagram (AWS) and explanation 
+[Link to imgur in case the image doesn't load](https://imgur.com/a/FElJkyH).  
+
 ![Deployment system diagram](diagram.png)
 1. **Data loading:**  
     - In the diagram above I'm going with a fully automated pipeline that runs whenever new data comes in - this is acheived by having a Lambda function *containing our ETL script* that triggers when a file(s) is uploaded.  
