@@ -52,8 +52,8 @@ python api/test_api.py  <database_name> <username> <password> <table_name>
 
 ![Deployment system diagram](diagram.png)
 1. **Data loading:**  
-    - In the diagram above I'm going with a fully automated pipeline that runs whenever new data comes in - this is acheived by having a Lambda function *containing our ETL script* that triggers when a file(s) is uploaded.  
-        - *AWS Lambda allow for up to 1000 concurent runs (free tier) which would help in case multiple files are uploaded in quick succession.*  
+    - In the diagram above, I'm going with a fully automated pipeline that runs whenever new data comes in - this is achieved by having a Lambda function *containing our ETL script* that triggers when a file(s) is uploaded.  
+        - *AWS Lambda allows for up to 1000 concurrent runs (free tier) which would help in case where multiple files are uploaded in quick succession.*  
     - This function would process the data and add it to our PostgreSQL table hosted on AWS RDS.  
 2. **API Gateway Configuration:**
     - Set up an API in Amazon API Gateway with the route /read/first-chunk.
@@ -62,11 +62,10 @@ python api/test_api.py  <database_name> <username> <password> <table_name>
     - A Lambda function that handles the fetching of data from the PostgreSQL database.
     - This function will be triggered when a request is received through the API Gateway.  
 
-Alternatively 2 and 3 this also can be achieved by using *the Serverless framework* which would be my preferred aproach.  
+Alternatively, 2 and 3 can also be achieved by using *the Serverless framework* which would be my preferred approach.  
 
 4. **Client Response:**  
     - API Gateway receives the response from the Lambda function.  
     - The structured response is returned to the client that made the API request.
 
-Overall this architecture enables a scalable and serverless approach where the API Gateway and AWS Lambda handle the request, interact with the database, and return the response to the client.
-
+Overall, this architecture enables a scalable and serverless approach where the API Gateway and AWS Lambda handle the request, interact with the database, and return the response to the client.
