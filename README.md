@@ -1,4 +1,10 @@
 # Home Task - Data Engineer - 1
+1. [Setup](#setup)
+2. [Running the ETL Pipeline](#running-the-etl-pipeline)
+3. [Testing the ETL Pipeline](#testing-the-etl-pipeline)
+4. [Running the REST API](#running-the-rest-api)
+5. [Testing the API](#testing-the-api)
+6. [Deployment system diagram on AWS and explanation](#deployment-system-diagram-on-aws-and-explanation)
 ## Setup
 ***OS used: Ubuntu 20.04.6***
 1. Clone the repository:
@@ -41,7 +47,7 @@ Run the test script to send a request to the API and print the response:
 ```bash
 python api/test_api.py  <database_name> <username> <password> <table_name>
 ```
-## Deployment system diagram (AWS) and explanation 
+## Deployment system diagram on AWS and explanation 
 [Link to imgur in case the image doesn't load](https://imgur.com/a/FElJkyH).  
 
 ![Deployment system diagram](diagram.png)
